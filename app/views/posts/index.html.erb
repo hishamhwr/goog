@@ -7,10 +7,13 @@
         </div>
       </div>
       <div class="image center-block">
-        <%= link_to (image_tag post.image.url(:thumb), class:'img-responsive'), post_path(post) %>
-      </div>
-  <%= audio_tag  post.audio.url, controls: true %>
+<%= link_to (image_tag post.image.url(:thumb), class:'img-responsive'), post_path(post) %>
 
+
+      </div>
+            <div class="audio center-block">
+  <%= audio_tag  post.audio.url, controls: true %>
+</div>
   <p class="dod">
   <%= post.title %><br>
   <%= post.description %><br>
