@@ -1,0 +1,24 @@
+<div class="posts-wrapper row">
+  <% @posts.each do |post| %>
+    <div class="post">
+      <div class="post-head">
+        <div class="name">
+          Hisham Hawara
+        </div>
+      </div>
+      <div class="image center-block">
+        <%= link_to (image_tag post.image.url(:thumb), class:'img-responsive'), post_path(post) %>
+      </div>
+  <%= audio_tag  post.audio.url, controls: true %>
+
+  <p class="dod">
+  <%= post.title %><br>
+  <%= post.description %><br>
+  <%= post.hashtags %><br>
+  <%= link_to post.youtube %><br>
+  <%= link_to post.soundcloud %><br>
+  <%= link_to post.itunes %>
+  </p>
+    </div>
+  <% end %>
+</div>
